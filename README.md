@@ -1,4 +1,4 @@
-#Weather Forecast on Python
+# Weather Forecast on Python
 This is a small program, which can show you an information about weather in current
 input city, town, etc on your browser.
 
