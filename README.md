@@ -1,6 +1,9 @@
 # Weather Forecast on Python
+
 This is a small program, which can show you an information about weather in current
 input city, town, etc on your browser.
+
+`only Russian cities are available now`
 
 >Special thanks to @igor_chubin - the creator of site with weather forecasting.
 

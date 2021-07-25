@@ -7,10 +7,17 @@ import webbrowser
 class ForecastApp:
     def __init__(self, title="Weather Forecast"):
         self.main_w = tk.Tk()
-        self.main_w.geometry('400x250')
+        self.main_w.geometry('380x200')
         self.main_w.title(title)
+        self.main_w.resizable(width=False, height=False)
         self.main_w.iconbitmap(r'sunny_sunshine.ico')
-        self.citys = ["Astrakhan", "Moscow", "St.Petersburg", "Volgograd", "Omsk", "Kaliningrad"]
+        self.citys = ["Astrakhan", "Moscow", "St.Petersburg", "Volgograd", "Omsk", "Kaliningrad", "Arkhangelsk", 
+                    "Belgorod", "Velikiy Novgorod", "Vladivostok", "Vladimir", "Voronezh", 
+                    "Ekaterinburg", "Irkutsk", "Kazan", "Kemerovo", "Krasnodar", "Krasnoyarsk", 
+                    "Kursk", "Lipetsk", "Magadan", "Makhachkala", "Murmansk", "Nizhny Novgorod", "Novosibirsk", 
+                    "Orol", "Penza", "Permian", "Petropavlovsk-Kamchatsky", "Pskov", "Rostov-on-Don", 
+                    "Ryazan", "Salekhard", "Samara", "Saransk", "Saratov", "Khabarovsk", "Cheboksary", 
+                    "Chelyabinsk", "Elista", "Yuzhno-Sakhalinsk", "Yakutsk", "Yaroslavl"]
         self.citys.sort()
 
 #--------------------------------Widgets---------------------------------------
@@ -25,7 +32,7 @@ class ForecastApp:
         url = 'https://wttr.in/{}'.format(self.city.get())
         reqs = requests.get(url)
         webbrowser.open(url, new=1)
-
+#----------------------------Run App------------------------
     def run(self):
         self.widgets()
         self.main_w.mainloop()
